@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+      <h2 class="test">小程序内嵌内容运营系统</h2>
+    <!-- <img src="./assets/logo.png"> -->
     <router-view/>
   </div>
 </template>
@@ -18,12 +19,17 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   max-width: 10rem;
   min-width: 320px;
   margin-left: auto;
   margin-right: auto;
   background: #efedec;
+  .test{
+    padding: 40px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
 }
 </style>
