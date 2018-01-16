@@ -1,3 +1,7 @@
-### 微信公众号 - H5 - demo
+# wx-h5
 
-    面向 公众号的 开发框架
+> h5
+
+## Build Setup
+
+> look package.json
