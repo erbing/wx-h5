@@ -61,12 +61,20 @@ export default {
     methods: {
         tests() {
             console.log('this is tests')
+        },
+        testApi() {
+            this.$http('https://ali-mp.zhongan.com/Spreader/api/product/list', (res) => {
+                console.log('====>>>> res', res)
+            }, (err) => {
+                console.log(err)
+            })
         }
     },
     mounted() {
         console.log('=========>>>>>', 'this is props')
     },
     created() {
+        this.testApi()
         console.log('=======<<<<< this is created')
     }
 }
