@@ -50,7 +50,7 @@ export default {
     },
     computed: {
         markCode() {
-            return this.test + 123
+            return this.test + 123123
         }
     },
     data() {
