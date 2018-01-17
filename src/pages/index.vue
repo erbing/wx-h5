@@ -63,7 +63,7 @@ export default {
             console.log('this is tests')
         },
         testApi() {
-            this.$http('https://ali-mp.zhongan.com/Spreader/api/product/list', (res) => {
+            this.$http('/Spreader/api/product/list', (res) => {
                 console.log('====>>>> res', res)
             }, (err) => {
                 console.log(err)
