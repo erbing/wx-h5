@@ -1,81 +1,79 @@
 <template>
-  <div>
-    <group>
-        <cell title="100" value="value">
-            <h3 @click="tests">This is H3</h3>
-        </cell>
-    </group>
+    <div class="index">
 
-    <group>
-        <cell title="100" value="value">
-            <Countdown :value="100" :start="true"></Countdown>
-        </cell>
-    </group>
+        <div class="line">--- 头部导航 ---</div>
 
-    <group>
-        <icon type="success"></icon>
-        <icon type="info"></icon>
-        <icon type="info-circle"></icon>
-        <icon type="warn"></icon>
-        <icon type="waiting"></icon>
-        <icon type="waiting-circle"></icon>
-        <icon type="safe-success"></icon>
-        <icon type="safe-warn"></icon>
-        <icon type="success-circle"></icon>
-        <icon type="success-no-circle"></icon>
-        <icon type="circle"></icon>
-        <icon type="download"></icon>
-        <icon type="cancel"></icon>
-        <icon type="search"></icon>
-        <icon type="clear"></icon>
-        <br/><br/>
-        <icon type="success" is-msg></icon>
-        <icon type="info" is-msg></icon>
-        <icon type="safe-success" is-msg></icon>
-        <icon type="safe-warn" is-msg></icon>
-    </group>
-  </div>
+        <scroller lock-y :scrollbar-x="false">
+            <div class="tests">
+                <ul>
+                    <li>保险</li>
+                    <li>保险</li>
+                    <li>保险</li>
+                    <li>保险</li>
+                    <li>保险</li>
+                </ul>
+            </div>
+        </Scroller>
+
+        <div class="line">--- list 列表 ---</div>
+        
+
+        <div class="list">
+            <div class="item"></div>
+        </div>
+
+    </div>
 </template>
 
+
 <script>
-import { Group, Cell, Countdown, Icon } from 'vux'
+
+import { Scroller } from 'vux'
 
 export default {
     name: 'index',
-    components: {
-        Group,
-        Cell,
-        Countdown,
-        Icon
-    },
-    computed: {
-        markCode() {
-            return this.test + 123123
-        }
-    },
-    data() {
+    data: () => {
         return {
-            test: 123
+            index: 1
         }
     },
-    methods: {
-        tests() {
-            console.log('this is tests')
-        },
-        testApi() {
-            this.$http('/Spreader/api/product/list', (res) => {
-                console.log('====>>>> res', res)
-            }, (err) => {
-                console.log(err)
-            })
-        }
-    },
-    mounted() {
-        console.log('=========>>>>>', 'this is props')
-    },
-    created() {
-        this.testApi()
-        console.log('=======<<<<< this is created')
+    components: {
+        Scroller
     }
 }
 </script>
+
+<style lang="less">
+    .index{
+        .line{
+            font-size: 16px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2CB044;
+        }
+        .tests{
+            height: 100px;
+            position: relative;
+            width: 580px;
+            ul{
+                padding: 0;
+                margin: 0;
+                li{
+                    list-style: none;
+                    width: 100px;
+                    height: 80px;
+                    line-height: 80px;
+                    background: #ccc;
+                    float: left;
+                    text-align: center;
+                    margin-right: 20px;
+                    display: inline-block;
+                }
+                li:last-child {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+</style>
