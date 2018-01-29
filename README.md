@@ -5,3 +5,7 @@
 ## Build Setup
 
 > look package.json
+
+## add vux
+
+> add vux for wx dev
