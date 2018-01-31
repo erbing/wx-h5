@@ -5,11 +5,13 @@
   "author": "zhangge <zhangge@zhongan.com>",
   "private": true,
   "scripts": {
+    "init": "npm i --registry=https://registry.npm.taobao.org",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "fastclick": "^1.0.6",
     "less-loader": "^4.0.5",
     "lib-flexible": "^0.3.2",

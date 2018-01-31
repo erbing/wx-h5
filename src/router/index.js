@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Demo from '@/pages/demo'
 import Index from '@/pages/index'
 import Msg from '@/pages/msg'
+import Test from '@/pages/test'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/msg',
       name: 'Msg',
       component: Msg
+    },
+    {
+      path: '/test',
+      name: 'Test',
+      component: Test
     }
   ]
 })
